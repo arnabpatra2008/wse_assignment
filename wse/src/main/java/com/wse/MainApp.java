@@ -8,6 +8,7 @@ import java.io.IOException;
 import org.cacheonix.Cacheonix;
 import org.cacheonix.cache.Cache;
 
+import com.wse.controller.CreateAndWriteFileIn;
 import com.wse.controller.ReadFromCache;
 import com.wse.controller.ReadFromDisk;
 import com.wse.controller.TextFile;
@@ -25,10 +26,16 @@ public class MainApp
 
     	      // Replace the file name with an actual file name
     		 String pathName = "Path of TXT file to be put here";
+    		 
+    		 String content = "Content of the text file";
 
-    	     // String pathName = "Path of TXT file to be put here";
+    	     
 
-
+    		 // write file to disk file 
+   	      
+   	      new CreateAndWriteFileIn(pathName,content);
+   	      
+   	      // 
 
     	      MainApp fileCache= new MainApp();
     	      Cacheonix cacheonix = Cacheonix.getInstance();
@@ -44,6 +51,8 @@ public class MainApp
     	         new ReadFromCache(pathName);
 
     	      }
+    	      
+    	     
 
 
 
